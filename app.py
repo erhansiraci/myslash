@@ -10,7 +10,7 @@ def hello():
     return 'Hello INOUT!'
 
 @post('/inout/<in_out>')
-def hello(in_out):
+def hello_with_params(in_out):
     return 'Hello '+ in_out
 
 if __name__ == '__main__':
