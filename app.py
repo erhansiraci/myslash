@@ -7,8 +7,9 @@ from bottle import run, post,request
 
 @post('/inout')
 def hello():
-    var = request.forms.get('command')
-    return 'Hello ' + var
+    command = request.forms.get('command')
+    text = request.forms.get('text')
+    return 'Hello ' + var + text
 
 if __name__ == '__main__':
     port = os.environ.get('PORT', 5000)
