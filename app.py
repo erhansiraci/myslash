@@ -5,15 +5,14 @@ import os
 from bottle import run, post,request
 
 
-@post('/inout')
+@post('/checkin')
 def hello():
     command = request.forms.get('command')
     text = request.forms.get('text')
     response_text = ""
-    if command == '/inout':
-        response_text = "correct command"
+    if command == '/checkin':
+        response_text = "checkin command"
         params = text.split(' ')
-        response_text = params
     return response_text
 
 if __name__ == '__main__':
