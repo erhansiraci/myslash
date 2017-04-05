@@ -9,6 +9,9 @@ from bottle import run, post
 def hello():
     return 'Hello INOUT!'
 
+@post('/inout/<in_out>')
+def hello(in_out):
+    return 'Hello '+ in_out
 
 if __name__ == '__main__':
     port = os.environ.get('PORT', 5000)
