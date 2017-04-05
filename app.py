@@ -6,12 +6,22 @@ from bottle import run, post,request
 
 
 @post('/checkin')
-def hello():
+def do_checkin():
     command = request.forms.get('command')
     text = request.forms.get('text')
     response_text = ""
     if command == '/checkin':
         response_text = "checkin command"
+        params = text.split(' ')
+    return response_text
+
+@post('/checkout')
+def do_checkout():
+    command = request.forms.get('command')
+    text = request.forms.get('text')
+    response_text = ""
+    if command == '/checkout':
+        response_text = "checkout command"
         params = text.split(' ')
     return response_text
 
