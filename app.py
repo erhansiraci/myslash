@@ -5,9 +5,9 @@ import os
 from bottle import run, post
 
 
-@post('/hello')
+@post('/inout')
 def hello():
-    return 'Hello World!'
+    return 'Hello INOUT!'
 
 
 if __name__ == '__main__':
