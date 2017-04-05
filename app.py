@@ -9,7 +9,7 @@ from bottle import run, post,request
 def hello():
     var = request.form.get('command',NONE)
     print var
-    return 'Hello INOUT!'
+    return 'Hello ' + var
 
 if __name__ == '__main__':
     port = os.environ.get('PORT', 5000)
