@@ -10,7 +10,7 @@ def hello():
     command = request.forms.get('command')
     text = request.forms.get('text')
     response_text = ""
-    if(command == "/inout")
+    if command == '/inout':
         response_text = "correct command"
     return 'Hello ' + response_text
 
