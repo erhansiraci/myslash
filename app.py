@@ -8,7 +8,6 @@ from bottle import run, post,request
 @post('/inout')
 def hello():
     var = request.form.get('command',NONE)
-    print var
     return 'Hello ' + var
 
 if __name__ == '__main__':
