@@ -12,7 +12,9 @@ def hello():
     response_text = ""
     if command == '/inout':
         response_text = "correct command"
-    return 'Hello ' + response_text
+        params = text.split(' ')
+        response_text = params
+    return response_text
 
 if __name__ == '__main__':
     port = os.environ.get('PORT', 5000)
