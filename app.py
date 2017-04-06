@@ -9,11 +9,12 @@ from bottle import run, post,request
 def do_checkin():
     command = request.forms.get('command')
     text = request.forms.get('text')
+    env_var = os.environ.get('DATABASE_URL');
     response_text = ""
     if command == '/checkin':
         response_text = "checkin command"
         params = text.split(' ')
-    return response_text
+    return response_text + env_var
 
 @post('/checkout')
 def do_checkout():
